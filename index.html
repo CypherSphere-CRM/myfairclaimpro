@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Property Damage Inspection | Fernando</title>
+
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a}
+  header{background:#0b3b75;color:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px}
+  header h2{margin:0;font-size:20px}
+  header button{background:white;color:#0b3b75;border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer}
+
+  .hidden{display:none}
+  .hero{padding:60px 6%;display:grid;grid-template-columns:1fr 430px;gap:35px;align-items:center;background:linear-gradient(135deg,#0b3b75,#0f62b3);color:white}
+  .hero h1{font-size:46px;line-height:1.05;margin:0 0 18px}
+  .hero p{font-size:19px;line-height:1.5}
+  .pill{display:inline-block;background:#ffffff22;border:1px solid #ffffff44;padding:9px 14px;border-radius:999px;font-weight:800;margin-bottom:18px}
+  .btn{background:#f97316;color:white;padding:14px 22px;border:none;border-radius:10px;font-weight:900;text-decoration:none;display:inline-block;cursor:pointer}
+  .btn-dark{background:#0b1d3a}
+
+  .form-box{background:white;color:#0f172a;padding:28px;border-radius:22px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+  form{display:flex;flex-direction:column;gap:12px}
+  input,select,textarea{padding:14px;border-radius:9px;border:1px solid #cbd5e1;font-size:16px}
+  textarea{min-height:95px}
+  section{padding:55px 6%}
+  h2{font-size:32px;margin:0 0 18px}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,.08)}
+  .card img{width:100%;height:170px;object-fit:cover;background:#e2e8f0}
+  .card div{padding:18px}
+  .card h3{margin:0 0 8px}
+
+  .process-list{max-width:760px;margin:auto;font-size:18px;line-height:1.8}
+  .process-list li{margin-bottom:12px}
+
+  .support{background:#0b1d3a;color:white;display:grid;grid-template-columns:360px 1fr;gap:30px;align-items:center}
+  .support img{width:100%;height:330px;object-fit:cover;border-radius:22px}
+  .support ul{line-height:1.8;font-size:17px}
+
+  .cta{background:#f97316;color:white;text-align:center;padding:60px 6%}
+  .cta p{font-size:18px}
+
+  footer{background:#0b1d3a;color:white;text-align:center;padding:30px 20px;margin-bottom:70px}
+  footer a{color:#cbd5e1;font-weight:800;text-decoration:none}
+
+  .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#0b1d3a;padding:12px;display:flex;gap:10px;justify-content:center;z-index:999}
+  .sticky-cta a{min-width:150px;text-align:center}
+  .call-now{background:#16a34a}
+
+  @media(max-width:850px){
+    header{flex-direction:column;text-align:center}
+    .hero,.support{grid-template-columns:1fr}
+    .grid{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    .sticky-cta{flex-direction:row}
+    .sticky-cta a{font-size:14px;padding:13px 12px}
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Fernando | Property Claim Group USA</h2>
+  <button onclick="toggleLang()">Español / English</button>
+</header>
+
+<!-- ENGLISH -->
+<div id="en">
+
+<section class="hero">
+  <div>
+    <span class="pill">Hablamos Español • No upfront cost</span>
+    <h1>Roof Damage, Leaks, or Storm Damage?</h1>
+    <p>Start with a professional inspection. Fernando and Property Claim Group USA inspect the property, review the policy, coordinate repair professionals, and help handle the insurance process from start to finish.</p>
+    <a href="#form-en" class="btn">Request Inspection</a>
+  </div>
+
+  <div class="form-box" id="form-en">
+    <h2>Request a Call Back</h2>
+    <p>Takes 10 seconds • No obligation</p>
+
+    <form action="https://formspree.io/f/xaqarnwe" method="POST">
+      <input type="hidden" name="language" value="English">
+      <input name="name" placeholder="Full Name" required>
+      <input name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+
+      <select name="damage_type" required>
+        <option value="">Type of Damage</option>
+        <option>Roof Damage</option>
+        <option>High Wind Damage</option>
+        <option>Bathroom Leak</option>
+        <option>Kitchen Leak</option>
+        <option>Water Damage / Mold Concern</option>
+      </select>
+
+      <textarea name="message" placeholder="Briefly describe what happened"></textarea>
+      <button type="submit" class="btn">Schedule My Inspection</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <h2>Damage We Can Help Review</h2>
+  <p>If you see stains, leaks, missing shingles, moisture, or possible mold, it may be time to have the property inspected.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Roof damage">
+      <div><h3>Roof Damage</h3><p>Missing shingles, lifted edges, storm impact, or water entering from above.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Bathroom leak">
+      <div><h3>Bathroom Leaks</h3><p>Ceiling stains, moisture, peeling paint, soft drywall, or possible mold.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/7061662/pexels-photo-7061662.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Kitchen leak">
+      <div><h3>Kitchen Leaks</h3><p>Water under cabinets, wall stains, plumbing leaks, or ceiling bubbles.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/51953/mother-nature-tornado-dangerous-beautiful-51953.jpeg?auto=compress&cs=tinysrgb&w=900" alt="High wind damage">
+      <div><h3>High Wind Damage</h3><p>Damage after storms, strong winds, lifted materials, or exterior impact.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center;">How the Process Works</h2>
+  <ul class="process-list">
+    <li><strong>Inspection:</strong> Fernando checks the roof, interior rooms, ceilings, walls, and visible damage areas.</li>
+    <li><strong>Policy Review:</strong> The insurance policy is reviewed to understand coverage and the next step.</li>
+    <li><strong>Damage Assessment:</strong> The team looks for roof damage, leaks, water intrusion, mold concerns, and storm-related issues.</li>
+    <li><strong>Repair Coordination:</strong> The right professionals are brought in to help with mitigation and repairs.</li>
+    <li><strong>Insurance Process:</strong> PCG helps handle the insurance claim process from start to finish.</li>
+    <li><strong>Additional Support:</strong> If needed, legal support may get involved to help move the claim forward.</li>
+  </ul>
+</section>
+
+<section class="support">
+  <img src="https://images.pexels.com/photos/8293735/pexels-photo-8293735.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Property inspection support">
+  <div>
+    <h2>Guidance From Inspection to Resolution</h2>
+    <p>Fernando and Property Claim Group USA help simplify the process so homeowners do not have to figure everything out alone.</p>
+    <ul>
+      <li>Roof and interior damage inspection</li>
+      <li>Policy review support</li>
+      <li>Repair and mitigation coordination</li>
+      <li>Insurance process guidance</li>
+      <li>Bilingual communication</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Not Sure If the Damage Is Serious?</h2>
+  <p>Let Fernando’s team take a look.</p>
+  <a href="#form-en" class="btn btn-dark">Request Inspection</a>
+</section>
+
+</div>
+
+<!-- SPANISH -->
+<div id="es" class="hidden">
+
+<section class="hero">
+  <div>
+    <span class="pill">We Speak English • Sin costo inicial</span>
+    <h1>¿Daños en el techo, filtraciones o daños por tormenta?</h1>
+    <p>Comienza con una inspección profesional. Fernando y Property Claim Group USA inspeccionan la propiedad, revisan la póliza, coordinan profesionales de reparación y ayudan a manejar el proceso con el seguro de principio a fin.</p>
+    <a href="#form-es" class="btn">Solicitar Inspección</a>
+  </div>
+
+  <div class="form-box" id="form-es">
+    <h2>Solicita una llamada</h2>
+    <p>Toma 10 segundos • Sin compromiso</p>
+
+    <form action="https://formspree.io/f/xaqarnwe" method="POST">
+      <input type="hidden" name="language" value="Spanish">
+      <input name="name" placeholder="Nombre Completo" required>
+      <input name="phone" placeholder="Número de Teléfono" required>
+      <input type="email" name="email" placeholder="Correo Electrónico" required>
+
+      <select name="damage_type" required>
+        <option value="">Tipo de Daño</option>
+        <option>Daño en el techo</option>
+        <option>Daño por vientos fuertes</option>
+        <option>Filtración en baño</option>
+        <option>Filtración en cocina</option>
+        <option>Daño de agua / posible moho</option>
+      </select>
+
+      <textarea name="message" placeholder="Describe brevemente lo ocurrido"></textarea>
+      <button type="submit" class="btn">Agendar Mi Inspección</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <h2>Daños que Podemos Revisar</h2>
+  <p>Si ves manchas, filtraciones, tejas faltantes, humedad o posible moho, puede ser momento de pedir una inspección.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Daño en techo">
+      <div><h3>Daño en el Techo</h3><p>Tejas faltantes, bordes levantados, impacto de tormenta o agua entrando desde arriba.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Filtración en baño">
+      <div><h3>Filtraciones en Baño</h3><p>Manchas en el techo, humedad, pintura levantada, drywall blando o posible moho.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/7061662/pexels-photo-7061662.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Filtración en cocina">
+      <div><h3>Filtraciones en Cocina</h3><p>Agua debajo de gabinetes, manchas en paredes, fugas de plomería o burbujas en el techo.</p></div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/51953/mother-nature-tornado-dangerous-beautiful-51953.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Daños por viento">
+      <div><h3>Daños por Vientos Fuertes</h3><p>Daños después de tormentas, vientos fuertes, materiales levantados o impacto exterior.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Cómo Funciona el Proceso</h2>
+  <ul class="process-list">
+    <li><strong>Inspección:</strong> Fernando revisa el techo, áreas interiores, techos, paredes y daños visibles.</li>
+    <li><strong>Revisión de Póliza:</strong> Se revisa la póliza para entender la cobertura y el próximo paso.</li>
+    <li><strong>Evaluación de Daños:</strong> El equipo revisa daños de techo, filtraciones, entrada de agua, posible moho y daños por tormenta.</li>
+    <li><strong>Coordinación de Reparaciones:</strong> Se coordinan los profesionales adecuados para mitigación y reparaciones.</li>
+    <li><strong>Proceso con el Seguro:</strong> PCG ayuda a manejar el proceso del reclamo con el seguro de principio a fin.</li>
+    <li><strong>Apoyo Adicional:</strong> Si es necesario, apoyo legal puede involucrarse para ayudar a avanzar el reclamo.</li>
+  </ul>
+</section>
+
+<section class="support">
+  <img src="https://images.pexels.com/photos/8293735/pexels-photo-8293735.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Apoyo con inspección">
+  <div>
+    <h2>Guía Desde la Inspección Hasta la Resolución</h2>
+    <p>Fernando y Property Claim Group USA ayudan a simplificar el proceso para que los propietarios no tengan que resolverlo todo solos.</p>
+    <ul>
+      <li>Inspección de techo y daños interiores</li>
+      <li>Apoyo con revisión de póliza</li>
+      <li>Coordinación de reparación y mitigación</li>
+      <li>Guía con el proceso del seguro</li>
+      <li>Comunicación bilingüe</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>¿No Estás Seguro si el Daño es Serio?</h2>
+  <p>Deja que el equipo de Fernando lo revise.</p>
+  <a href="#form-es" class="btn btn-dark">Solicitar Inspección</a>
+</section>
+
+</div>
+
+<footer>
+  <p>Fernando | Property Claim Group USA</p>
+  <p>
+    Phone: <a href="tel:+14079463512">(407) 946-3512</a> |
+    Email: <a href="mailto:info@myfairclaimpro.com">info@myfairclaimpro.com</a>
+  </p>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn call-now" href="tel:+14079463512">Call Now</a>
+  <a class="btn" href="#form-en" id="stickyFormBtn">Request Inspection</a>
+</div>
+
+<script>
+function toggleLang(){
+  const en=document.getElementById("en");
+  const es=document.getElementById("es");
+  const sticky=document.getElementById("stickyFormBtn");
+
+  en.classList.toggle("hidden");
+  es.classList.toggle("hidden");
+
+  if(en.classList.contains("hidden")){
+    sticky.textContent="Solicitar Inspección";
+    sticky.href="#form-es";
+  }else{
+    sticky.textContent="Request Inspection";
+    sticky.href="#form-en";
+  }
+}
+</script>
+
+</body>
+</html>
