@@ -11,8 +11,8 @@
   header{background:#0b3b75;color:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px}
   header h2{margin:0;font-size:20px}
   header button{background:white;color:#0b3b75;border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer}
-
   .hidden{display:none}
+
   .hero{padding:60px 6%;display:grid;grid-template-columns:1fr 430px;gap:35px;align-items:center;background:linear-gradient(135deg,#0b3b75,#0f62b3);color:white}
   .hero h1{font-size:46px;line-height:1.05;margin:0 0 18px}
   .hero p{font-size:19px;line-height:1.5}
@@ -24,21 +24,28 @@
   form{display:flex;flex-direction:column;gap:12px}
   input,select,textarea{padding:14px;border-radius:9px;border:1px solid #cbd5e1;font-size:16px}
   textarea{min-height:95px}
+
   section{padding:55px 6%}
   h2{font-size:32px;margin:0 0 18px}
-
   .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   .card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,.08)}
   .card img{width:100%;height:180px;object-fit:cover;background:#e2e8f0}
   .card div{padding:18px}
   .card h3{margin:0 0 8px}
 
-  .process-list{max-width:760px;margin:auto;font-size:18px;line-height:1.8}
+  .process-list{max-width:820px;margin:auto;font-size:18px;line-height:1.8}
   .process-list li{margin-bottom:12px}
 
   .support{background:#0b1d3a;color:white;display:grid;grid-template-columns:360px 1fr;gap:30px;align-items:center}
   .support img{width:100%;height:330px;object-fit:cover;border-radius:22px}
   .support ul{line-height:1.8;font-size:17px}
+
+  .trust{background:white;text-align:center}
+  .trust-box{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .trust-item{background:#f1f5f9;border-radius:16px;padding:20px;font-weight:800}
+
+  .disclaimer{background:#f8fafc;padding:30px 6%;font-size:12px;color:#475569;text-align:center}
+  .disclaimer p{max-width:900px;margin:auto;line-height:1.6}
 
   .cta{background:#f97316;color:white;text-align:center;padding:60px 6%}
   .cta p{font-size:18px}
@@ -53,7 +60,7 @@
   @media(max-width:850px){
     header{flex-direction:column;text-align:center}
     .hero,.support{grid-template-columns:1fr}
-    .grid{grid-template-columns:1fr}
+    .grid,.trust-box{grid-template-columns:1fr}
     .hero h1{font-size:34px}
     .sticky-cta a{font-size:14px;padding:13px 12px}
   }
@@ -72,13 +79,15 @@
 
 <section class="hero">
   <div>
-    <span class="pill">Hablamos Español • No upfront cost</span>
-    <h1>Roof Damage, Leaks, or Storm Damage?</h1>
-    <p>Start with a professional inspection. Fernando and Property Claim Group USA inspect the property, review the policy, coordinate repair professionals, and help handle the insurance process from start to finish.
-<p style="font-weight:700;">
-After storms or leaks, small damage can turn into bigger problems fast.
-</p>
-    <a href="#form-en" class="btn">Request Inspection</a>
+    <span class="pill">Hablamos Español • Free Consultation</span>
+    <h1>Property Damage? Start With a Professional Inspection.</h1>
+    <p>Fernando and Property Claim Group USA help inspect the property, identify visible damage, review policy details, document findings, and guide homeowners through the next steps.</p>
+
+    <p style="font-weight:800;margin-top:10px;font-size:18px;">
+      After storms or leaks, small damage can turn into bigger problems fast.
+    </p>
+
+    <a href="#form-en" class="btn">Request Free Inspection</a>
   </div>
 
   <div class="form-box" id="form-en">
@@ -94,53 +103,60 @@ After storms or leaks, small damage can turn into bigger problems fast.
       <select name="damage_type" required>
         <option value="">Type of Damage</option>
         <option>Roof Damage</option>
-        <option>High Wind Damage</option>
+        <option>High Wind / Storm Damage</option>
         <option>Bathroom Leak</option>
         <option>Kitchen Leak</option>
-        <option>Water Damage / Mold Concern</option>
+        <option>Water Damage</option>
+        <option>Mold Concern</option>
+        <option>Window Damage</option>
+        <option>Fire Damage</option>
       </select>
 
       <textarea name="message" placeholder="Briefly describe what happened"></textarea>
       <button type="submit" class="btn">Schedule My Inspection</button>
+
+      <p style="font-size:12px;text-align:center;color:#666;">
+        Free consultation • We help guide the next steps
+      </p>
     </form>
   </div>
 </section>
 
 <section>
-  <h2>Damage We Can Help Review</h2>
-  <p>If you see stains, leaks, missing shingles, moisture, or possible mold, it may be time to have the property inspected.</p>
+  <h2>Types of Damage We Can Help Review</h2>
+  <p>If you notice stains, leaks, missing shingles, moisture, window damage, or possible mold, it may be time to request an inspection.</p>
 
   <div class="grid">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1628133287836-40bd5453bed1?auto=format&fit=crop&w=900&q=80" alt="Damaged roof shingles">
+      <img src="https://images.unsplash.com/photo-1628133287836-40bd5453bed1?auto=format&fit=crop&w=900&q=80" alt="Roof damage">
       <div>
         <h3>Roof Damage</h3>
-        <p>Missing shingles, lifted edges, storm impact, or water entering from above.</p>
+        <p>Roof leaks, missing shingles, lifted materials, storm impact, or water entering from above.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom leak inspection">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Water leak">
       <div>
-        <h3>Bathroom Leaks</h3>
-        <p>Ceiling stains, moisture, peeling paint, soft drywall, or possible mold.</p>
+        <h3>Water Damage</h3>
+        <p>Pipe leaks, appliance leaks, bathroom leaks, kitchen leaks, AC leaks, or ceiling stains.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Kitchen water damage">
+      <img src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=900&q=80" alt="Storm damage">
       <div>
-        <h3>Kitchen Leaks</h3>
-        <p>Water under cabinets, wall stains, plumbing leaks, or ceiling bubbles.</p>
+        <h3>Weather Damage</h3>
+        <p>Windstorm, hurricane, hail, wind, flood, or storm-related exterior damage.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=900&q=80" alt="Storm and high wind damage">
+      <img src="https://images.unsplash.com/photo-1590880449155-b54f958ce314?auto=format&fit=crop&w=900&q=80" alt="Mold or structural damage">
       <div>
-        <h3>High Wind Damage</h3>
-        <p>Damage after storms, strong winds, lifted materials, or exterior impact.</p>
+        <h3>Mold / Structural Concerns</h3>
+        <p>Mold from moisture, visible wall damage, fire damage, roof concerns, or window damage.</p>
       </div>
     </div>
 
@@ -150,32 +166,43 @@ After storms or leaks, small damage can turn into bigger problems fast.
 <section>
   <h2 style="text-align:center;">How the Process Works</h2>
   <ul class="process-list">
-    <li><strong>Inspection:</strong> Fernando checks the roof, interior rooms, ceilings, walls, and visible damage areas.</li>
-    <li><strong>Policy Review:</strong> The insurance policy is reviewed to understand coverage and the next step.</li>
-    <li><strong>Damage Assessment:</strong> The team looks for roof damage, leaks, water intrusion, mold concerns, and storm-related issues.</li>
-    <li><strong>Insurance Process:</strong> PCG helps handle the insurance claim process from start to finish.</li>
-    <li><strong>Additional Support:</strong> If needed, legal support may get involved to help move the claim forward.</li>
+    <li><strong>Inspection:</strong> The property is reviewed for visible roof, interior, water, weather, mold, or structural damage.</li>
+    <li><strong>Policy Review Support:</strong> Your insurance policy information may be reviewed to help understand possible coverage and next steps.</li>
+    <li><strong>Damage Documentation:</strong> Findings may be documented to help you better understand the condition of the property.</li>
+    <li><strong>Professional Coordination:</strong> When needed, you may be connected with qualified professionals for mitigation, repairs, or additional support.</li>
+    <li><strong>Claim Guidance:</strong> The team can help guide you through the insurance claim process based on your situation.</li>
+    <li><strong>Additional Support:</strong> If a dispute or complex issue arises, appropriate professional support may be recommended.</li>
   </ul>
 </section>
 
 <section class="support">
-  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Review of home inspection with professional">
+  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Couple reviewing property inspection with professional">
   <div>
-    <h2>Guidance From Inspection to Resolution</h2>
-    <p>Fernando and Property Claim Group USA help simplify the process so homeowners do not have to figure everything out alone.</p>
+    <h2>Guidance From Inspection to Next Steps</h2>
+    <p>Property Claim Group USA helps simplify the process so homeowners can better understand their options after property damage.</p>
     <ul>
-      <li>Roof and interior damage inspection</li>
-      <li>Policy review support</li>
-      <li>Insurance process guidance</li>
+      <li>Property damage inspection</li>
+      <li>Policy understanding support</li>
+      <li>Damage documentation guidance</li>
+      <li>Connection with qualified professionals</li>
       <li>Bilingual communication</li>
     </ul>
   </div>
 </section>
 
+<section class="trust">
+  <h2>Why Homeowners Reach Out</h2>
+  <div class="trust-box">
+    <div class="trust-item">15+ Years Industry Experience</div>
+    <div class="trust-item">Property Damage Guidance</div>
+    <div class="trust-item">English & Spanish Support</div>
+  </div>
+</section>
+
 <section class="cta">
-  <h2>Not Sure If the Damage Is Serious?</h2>
-  <p>Let Fernando’s team take a look.</p>
-  <a href="#form-en" class="btn btn-dark">Get Free Inspection</a>
+  <h2>Not Sure If You Have Property Damage?</h2>
+  <p>Schedule an inspection to better understand your situation and possible next steps.</p>
+  <a href="#form-en" class="btn btn-dark">Request Free Inspection</a>
 </section>
 
 </div>
@@ -185,13 +212,15 @@ After storms or leaks, small damage can turn into bigger problems fast.
 
 <section class="hero">
   <div>
-    <span class="pill">We Speak English • Sin costo inicial</span>
-    <h1>¿Daños en el techo, filtraciones o daños por tormenta?</h1>
-    <p>Comienza con una inspección profesional. Fernando y Property Claim Group USA inspeccionan la propiedad, revisan la póliza, coordinan profesionales de reparación y ayudan a manejar el proceso con el seguro de principio a fin.
-<p style="font-weight:700;">
-Después de tormentas o filtraciones, daños pequeños pueden convertirse en problemas más grandes rápidamente.
-</p>
-    <a href="#form-es" class="btn">Solicitar Inspección</a>
+    <span class="pill">We Speak English • Consulta Gratis</span>
+    <h1>¿Daños en la Propiedad? Comienza con una Inspección Profesional.</h1>
+    <p>Fernando y Property Claim Group USA ayudan a inspeccionar la propiedad, identificar daños visibles, revisar detalles de la póliza, documentar hallazgos y guiar a los propietarios con los próximos pasos.</p>
+
+    <p style="font-weight:800;margin-top:10px;font-size:18px;">
+      Después de tormentas o filtraciones, daños pequeños pueden convertirse en problemas más grandes rápidamente.
+    </p>
+
+    <a href="#form-es" class="btn">Solicitar Inspección Gratis</a>
   </div>
 
   <div class="form-box" id="form-es">
@@ -207,21 +236,28 @@ Después de tormentas o filtraciones, daños pequeños pueden convertirse en pro
       <select name="damage_type" required>
         <option value="">Tipo de Daño</option>
         <option>Daño en el techo</option>
-        <option>Daño por vientos fuertes</option>
+        <option>Daño por vientos fuertes / tormenta</option>
         <option>Filtración en baño</option>
         <option>Filtración en cocina</option>
-        <option>Daño de agua / posible moho</option>
+        <option>Daño por agua</option>
+        <option>Posible moho</option>
+        <option>Daño en ventanas</option>
+        <option>Daño por fuego</option>
       </select>
 
       <textarea name="message" placeholder="Describe brevemente lo ocurrido"></textarea>
       <button type="submit" class="btn">Agendar Mi Inspección</button>
+
+      <p style="font-size:12px;text-align:center;color:#666;">
+        Consulta gratis • Te ayudamos a entender los próximos pasos
+      </p>
     </form>
   </div>
 </section>
 
 <section>
-  <h2>Daños que Podemos Revisar</h2>
-  <p>Si ves manchas, filtraciones, tejas faltantes, humedad o posible moho, puede ser momento de pedir una inspección.</p>
+  <h2>Tipos de Daños que Podemos Revisar</h2>
+  <p>Si ves manchas, filtraciones, tejas faltantes, humedad, daños en ventanas o posible moho, puede ser momento de solicitar una inspección.</p>
 
   <div class="grid">
 
@@ -229,31 +265,31 @@ Después de tormentas o filtraciones, daños pequeños pueden convertirse en pro
       <img src="https://images.unsplash.com/photo-1628133287836-40bd5453bed1?auto=format&fit=crop&w=900&q=80" alt="Daño en techo">
       <div>
         <h3>Daño en el Techo</h3>
-        <p>Tejas faltantes, bordes levantados, impacto de tormenta o agua entrando desde arriba.</p>
+        <p>Filtraciones, tejas faltantes, materiales levantados, impacto de tormenta o agua entrando desde arriba.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Filtración en baño">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Daño por agua">
       <div>
-        <h3>Filtraciones en Baño</h3>
-        <p>Manchas en el techo, humedad, pintura levantada, drywall blando o posible moho.</p>
+        <h3>Daño por Agua</h3>
+        <p>Fugas de tuberías, filtraciones de baño o cocina, AC, electrodomésticos o manchas en el techo.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Filtración en cocina">
+      <img src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=900&q=80" alt="Daños por clima">
       <div>
-        <h3>Filtraciones en Cocina</h3>
-        <p>Agua debajo de gabinetes, manchas en paredes, fugas de plomería o burbujas en el techo.</p>
+        <h3>Daños por Clima</h3>
+        <p>Vientos fuertes, huracanes, granizo, inundaciones o daños exteriores por tormentas.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=900&q=80" alt="Daños por viento fuerte">
+      <img src="https://images.unsplash.com/photo-1590880449155-b54f958ce314?auto=format&fit=crop&w=900&q=80" alt="Moho o daño estructural">
       <div>
-        <h3>Daños por Vientos Fuertes</h3>
-        <p>Daños después de tormentas, vientos fuertes, materiales levantados o impacto exterior.</p>
+        <h3>Moho / Daños Estructurales</h3>
+        <p>Moho por humedad, daños visibles en paredes, daños por fuego, techo o ventanas.</p>
       </div>
     </div>
 
@@ -263,35 +299,52 @@ Después de tormentas o filtraciones, daños pequeños pueden convertirse en pro
 <section>
   <h2 style="text-align:center;">Cómo Funciona el Proceso</h2>
   <ul class="process-list">
-    <li><strong>Inspección:</strong> Fernando revisa el techo, áreas interiores, techos, paredes y daños visibles.</li>
-    <li><strong>Revisión de Póliza:</strong> Se revisa la póliza para entender la cobertura y el próximo paso.</li>
-    <li><strong>Evaluación de Daños:</strong> El equipo revisa daños de techo, filtraciones, entrada de agua, posible moho y daños por tormenta.</li>
-    <li><strong>Proceso con el Seguro:</strong> PCG ayuda a manejar el proceso del reclamo con el seguro de principio a fin.</li>
-    <li><strong>Apoyo Adicional:</strong> Si es necesario, apoyo legal puede involucrarse para ayudar a avanzar el reclamo.</li>
+    <li><strong>Inspección:</strong> Se revisa la propiedad para identificar daños visibles en techo, interior, agua, clima, moho o estructura.</li>
+    <li><strong>Apoyo con Revisión de Póliza:</strong> Se puede revisar información de la póliza para ayudar a entender posible cobertura y próximos pasos.</li>
+    <li><strong>Documentación de Daños:</strong> Los hallazgos pueden documentarse para ayudarte a entender mejor la condición de la propiedad.</li>
+    <li><strong>Coordinación Profesional:</strong> Cuando sea necesario, puedes ser conectado con profesionales calificados para mitigación, reparaciones o apoyo adicional.</li>
+    <li><strong>Guía con el Reclamo:</strong> El equipo puede ayudarte a navegar el proceso con el seguro según tu situación.</li>
+    <li><strong>Apoyo Adicional:</strong> Si surge una disputa o situación compleja, se puede recomendar apoyo profesional adecuado.</li>
   </ul>
 </section>
 
 <section class="support">
-  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Revisar inspeccion con un profesional">
+  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Pareja revisando inspección de propiedad con profesional">
   <div>
-    <h2>Guía Desde la Inspección Hasta la Resolución</h2>
-    <p>Fernando y Property Claim Group USA ayudan a simplificar el proceso para que los propietarios no tengan que resolverlo todo solos.</p>
+    <h2>Guía Desde la Inspección Hasta los Próximos Pasos</h2>
+    <p>Property Claim Group USA ayuda a simplificar el proceso para que los propietarios entiendan mejor sus opciones después de un daño en la propiedad.</p>
     <ul>
-      <li>Inspección de techo y daños interiores</li>
-      <li>Apoyo con revisión de póliza</li>
-      <li>Guía con el proceso del seguro</li>
+      <li>Inspección de daños a la propiedad</li>
+      <li>Apoyo para entender la póliza</li>
+      <li>Guía con documentación de daños</li>
+      <li>Conexión con profesionales calificados</li>
       <li>Comunicación bilingüe</li>
     </ul>
   </div>
 </section>
 
+<section class="trust">
+  <h2>Por Qué los Propietarios Nos Contactan</h2>
+  <div class="trust-box">
+    <div class="trust-item">15+ Años de Experiencia en la Industria</div>
+    <div class="trust-item">Guía con Daños a la Propiedad</div>
+    <div class="trust-item">Apoyo en Inglés y Español</div>
+  </div>
+</section>
+
 <section class="cta">
-  <h2>¿No Estás Seguro si el Daño es Serio?</h2>
-  <p>Deja que el equipo de Fernando lo revise.</p>
+  <h2>¿No Estás Seguro si Hay Daños en tu Propiedad?</h2>
+  <p>Solicita una inspección para entender mejor tu situación y posibles próximos pasos.</p>
   <a href="#form-es" class="btn btn-dark">Solicitar Inspección Gratis</a>
 </section>
 
 </div>
+
+<section class="disclaimer">
+  <p>
+    Disclaimer: This page is for informational and lead intake purposes only. Property Claim Group USA and its representatives provide property inspection, documentation, coordination, and guidance services. No outcome, payment amount, claim approval, settlement, or insurance decision is guaranteed. Any insurance claim decision depends on policy terms, documentation, damages, insurer review, and applicable laws. If legal advice or legal representation is needed, an appropriately licensed attorney should be consulted.
+  </p>
+</section>
 
 <footer>
   <p>Fernando | Property Claim Group USA</p>
@@ -302,7 +355,7 @@ Después de tormentas o filtraciones, daños pequeños pueden convertirse en pro
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn call-now" href="tel:+14079463512">Call Now (Free)</a>
+  <a class="btn call-now" href="tel:+14079463512">Call Now</a>
   <a class="btn" href="#form-en" id="stickyFormBtn">Request Inspection</a>
 </div>
 
